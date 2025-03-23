@@ -43,11 +43,12 @@ import pickle
 ---
 In this part, you will create and execute three SQL queries on the Chinook database. For this challenge **you will need to access the `Album` and `Artist` tables**.
 ### 1.1) Connect to the Database.
+
+```python
 # CodeGrade step1.1
 # Replace None with appropriate codepar
 # Connect to the Database here ("Chinook_Sqlite.sqlite")
 
-```python
 path = "Chinook_Sqlite.sqlite"
 conn = sqlite3.connect(path)
 ```
@@ -162,6 +163,8 @@ A medical test is designed to diagnose a certain disease. The test has a false p
 
 Assume that the person being tested is randomly selected from the broader population.
 # CodeGrade step2.1
+
+```python
 # Replace None with appropriate code
     
 false_pos_rate = 0.1
@@ -169,18 +172,28 @@ false_neg_rate = 0.02
 population_rate = 0.01
 
 p_pos_test = ((1 - false_neg_rate) * population_rate) + (false_pos_rate * (1 - population_rate))
+```
+
+```python
 # This test confirms that you have created a numeric variable named p_pos_test
 
 assert isinstance(p_pos_test, Number)
+```
+
+```python
 # These tests confirm that p_pos_test is a value between 0 and 1
 
 assert p_pos_test >= 0
 assert p_pos_test <= 1
+```
+
 ### 2.2) Create a numeric variable `p_disease_given_pos` containing the probability of a person actually having the disease if they receive a positive test result.
 
 Assume that the person being tested is randomly selected from the broader population.
 
 Hint: Use your answer to the previous question to help answer this one.
+
+```python
 # CodeGrade step2.2
 # Replace None with appropriate code
     
@@ -192,17 +205,26 @@ true_pos_rate = 1 - false_neg_rate  # 0.98
 no_disease_rate = 1 - population_rate # 0.99
 
 p_disease_given_pos = ((1 - false_neg_rate) * population_rate) / (((1 - false_neg_rate) * population_rate) + (false_pos_rate * (1 - population_rate)))
+```
+
+```python
 # This test confirms that you have created a numeric variable named p_disease_given_pos
 
 assert isinstance(p_disease_given_pos, Number)
+```
+
+```python
 # These tests confirm that p_disease_given_pos is a value between 0 and 1
 
 assert p_disease_given_pos >= 0
 assert p_disease_given_pos <= 1
+```
+
 ---
 ## Part 3: Normal Distribution [Suggested time: 20 minutes]
 ---
 In this part, you will analyze check totals at a TexMex restaurant. We know that the population distribution of check totals for the TexMex restaurant is normally distributed with a mean of \\$20 and a standard deviation of \\$3. 
+
 ### 3.1) Create a numeric variable `z_score_26` containing the z-score for a \\$26 check. 
 # CodeGrade step3.1
 # Replace None with appropriate code
