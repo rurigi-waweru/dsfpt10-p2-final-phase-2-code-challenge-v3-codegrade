@@ -301,7 +301,7 @@ print('The upper bound of the 95% confidence interval is {}'.format(conf_high))
 ### 3.4) Short Answer: Interpret the 95% confidence interval you just calculated in Question 1.3.
 
 <!-- # Your answer here -->
-#### brian-added-answer-below
+#### `brian-added-answer-below`
 From the results above we can be 95 percent confidence that the true average check amount that the waiter/waitress falls in the range betweem $18.41 and $19.59. This indicates that is we were to take a random samples of 100 checks and find the confidence level for every one of them, 95 percent of those intervals would have the actul mean check amount.
 
 ---
@@ -325,7 +325,7 @@ queso = pickle.load(open('./queso.pkl', 'rb'))
 
 
 <!-- # Brian-added:answer here -->
-#### brian-added-answer-below
+#### `brian-added-answer-below`
 $$ **Hypothesis Testing for Queso Orders** $$
 
 We are testing whether customers who order '_queso_' spend different amounts from those who do **not** order _'queso'_.  
@@ -343,7 +343,7 @@ $$ {u}_{queso} \neq {u}_{no-queso} $$
 Your answer should be _specific to this context,_  not a general statement of what Type I error is.
 
 <!-- # Brian-added:answer here -->
-#### brian-added-answer-below
+#### `brian-added-answer-below`
 A **Type I error** here would mean assuming that customers who order _'queso'_ spend a different amount of money than those who do not order _'queso'_, when in actual reality, there is no difference in their spending.
 
 ### 4.3) Create a numeric variable `p_value` containing the p-value associated with a statistical test of your hypotheses. 
@@ -371,7 +371,7 @@ assert isinstance(p_value, Number)
 ### 4.4) Short Answer: Can you reject the null hypothesis using a significance level of $\alpha$ = 0.05? Explain why or why not.
 
 <!-- # Brian-added:answer here -->
-#### brian-added-answer-below
+#### `brian-added-answer-below`
 The p-value is negligibly smaller that the significance value $\alpha$ = 0.05 hence we can certainly **Reject $ H_0 $ the Null Hypothesis.** The smallest value of the p-value suggests strong evidence against $ H_0 $. 
 
 $$ {p}_{value} < \alpha $$
