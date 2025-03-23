@@ -226,31 +226,49 @@ assert p_disease_given_pos <= 1
 In this part, you will analyze check totals at a TexMex restaurant. We know that the population distribution of check totals for the TexMex restaurant is normally distributed with a mean of \\$20 and a standard deviation of \\$3. 
 
 ### 3.1) Create a numeric variable `z_score_26` containing the z-score for a \\$26 check. 
+
+```python
 # CodeGrade step3.1
 # Replace None with appropriate code
 
 z_score_26 = (26 - 20) / 3
+```
+
+```python
 # This test confirms that you have created a numeric variable named z_score_26
 
 assert isinstance(z_score_26, Number)
+```
+
 ### 3.2) Create a numeric variable `p_under_26` containing the approximate proportion of all checks that are less than \\$26.
 
 Hint: Use the answer from the previous question along with the empirical rule, a Python function, or this [z-table](https://www.math.arizona.edu/~rsims/ma464/standardnormaltable.pdf).
+
+```python
 # CodeGrade step3.2
 # Replace None with appropriate code
 
 p_under_26 = stats.norm.cdf(z_score_26)
+```
+
+```python
 # This test confirms that you have created a numeric variable named p_under_26
 
 assert isinstance(p_under_26, Number)
+```
 
+```python
 # These tests confirm that p_under_26 is a value between 0 and 1
 
 assert p_under_26 >= 0
 assert p_under_26 <= 1
+```
+
 ### 3.3) Create numeric variables `conf_low` and `conf_high` containing the lower and upper bounds (respectively) of a 95% confidence interval for the mean of one waiter's check amounts using the information below. 
 
 One week, a waiter gets 100 checks with a mean of \\$19 and a standard deviation of \\$3.
+
+```python
 # CodeGrade step3.3
 # Replace None with appropriate code
 
@@ -260,12 +278,16 @@ std = 3
 
 conf_low = mean - stats.norm.ppf(0.975) * (std / (n ** 0.5))
 conf_high = mean + stats.norm.ppf(0.975) * (std / (n ** 0.5))
+```
 
+```python
 # These tests confirm that you have created numeric variables named conf_low and conf_high
 
 assert isinstance(conf_low, Number)
 assert isinstance(conf_high, Number)
+```
 
+```python
 # This test confirms that conf_low is below conf_high
 
 assert conf_low < conf_high
@@ -274,9 +296,13 @@ assert conf_low < conf_high
 
 print('The lower bound of the 95% confidence interval is {}'.format(conf_low))
 print('The upper bound of the 95% confidence interval is {}'.format(conf_high))
+```
+
 ### 3.4) Short Answer: Interpret the 95% confidence interval you just calculated in Question 1.3.
+
 <!-- # Your answer here -->
 From the results above we can be 95 percent confidence that the true average check amount that the waiter/waitress falls in the range betweem $18.41 and $19.59. This indicates that is we were to take a random samples of 100 checks and find the confidence level for every one of them, 95 percent of those intervals would have the actul mean check amount.
+
 ---
 ## Part 4: Statistical Testing [Suggested time: 20 minutes]
 ---
