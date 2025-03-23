@@ -24,6 +24,7 @@ For the short answer questions...
 * _Be concise_. You should be able to answer most short answer questions in a sentence or two. Writing unnecessarily long answers increases the risk of you being unclear or saying something incorrect.
 # Run this cell without changes to import the necessary libraries
 
+```python
 import itertools
 import numpy as np
 import pandas as pd 
@@ -36,6 +37,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 import pickle
+```
 ---
 ## Part 1: SQL [Suggested time: 20 minutes]
 ---
@@ -45,9 +47,16 @@ In this part, you will create and execute three SQL queries on the Chinook datab
 # Replace None with appropriate codepar
 # Connect to the Database here ("Chinook_Sqlite.sqlite")
 
+```python
 path = "Chinook_Sqlite.sqlite"
 conn = sqlite3.connect(path)
+```
+
+```python
 assert type(path) == str
+```
+
+```python
 # Run this cell without changes to see all the
 # tables in the database.
 
@@ -62,7 +71,11 @@ df = pd.read_sql(
 )
 
 df[df['type'] == 'table']
+```
+
 ### 1.2) Write a query to return the last ten artists alphabetically.
+
+```python
 # CodeGrade step1.2
 # Replace None with appropriate code
 # Hint: Use the Artist table!
@@ -78,13 +91,19 @@ first_query = """
 """
 
 pd.read_sql(first_query, conn)
+```
+
+```python
 # first_query should be a string
 assert type(first_query) == str
-
 # first_query should be a SQL query
 first_query_df = pd.read_sql(first_query, conn)
+```
+
 ### 1.3) Write a query to return all the albums in the database from Led Zeppelin.
 # CodeGrade step1.3
+
+```python
 # Replace None with appropriate code
 # Hint: Use the Artist and Album tables!
 
@@ -93,12 +112,19 @@ second_query = """
 """
 
 pd.read_sql(second_query, conn)
+```
+
+```python
 # second_query should be a string
 assert type(second_query) == str
 
 # second_query should be a SQL query
 second_query_df = pd.read_sql(second_query, conn)
+```
+
 ### 1.4) Write a query to return both the artist with the most albums in the database and the number of albums.
+
+```python
 # CodeGrade step1.4
 # Replace None with appropriate code
 
@@ -117,11 +143,16 @@ third_query = """
 """
 
 pd.read_sql(third_query, conn)
+```
+
+```python
 # third_query should be a string
 assert type(third_query) == str
 
 # third_query should be a SQL query
 third_query_df = pd.read_sql(third_query, conn)
+```
+
 ---
 ## Part 2: Bayesian Statistics [Suggested time: 15 minutes]
 ---
